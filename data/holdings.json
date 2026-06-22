@@ -1,0 +1,1395 @@
+{
+  "fetchedAt": "2026-06-22T07:00:43.601Z",
+  "latest": {
+    "period": "2026-03-31",
+    "filed": "2026-05-15",
+    "holdings": [
+      {
+        "name": "AMERICAN EXPRESS CO",
+        "value": 45087984892,
+        "shares": 0,
+        "rank": 1,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 21501063540,
+        "shares": 0,
+        "rank": 2,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 20471924668,
+        "shares": 0,
+        "rank": 3,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "OCCIDENTAL PETE CORP",
+        "value": 17221193015,
+        "shares": 0,
+        "rank": 4,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 15618994925,
+        "shares": 0,
+        "rank": 5,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 15151500000,
+        "shares": 0,
+        "rank": 6,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CHEVRON CORPORATION",
+        "value": 12052286868,
+        "shares": 0,
+        "rank": 7,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "ALPHABET INC",
+        "value": 11871367661,
+        "shares": 0,
+        "rank": 8,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CHUBB LTD SWITZ",
+        "value": 11162836215,
+        "shares": 0,
+        "rank": 9,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "APPLE INC",
+        "value": 8812603960,
+        "shares": 0,
+        "rank": 10,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "KRAFT HEINZ CO",
+        "value": 7323527057,
+        "shares": 0,
+        "rank": 11,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 6128850000,
+        "shares": 0,
+        "rank": 12,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 6105537360,
+        "shares": 0,
+        "rank": 13,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "MOODYS CORP",
+        "value": 5507110938,
+        "shares": 0,
+        "rank": 14,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "MOODYS CORP",
+        "value": 5223626090,
+        "shares": 0,
+        "rank": 15,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 3941866280,
+        "shares": 0,
+        "rank": 16,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 3672848880,
+        "shares": 0,
+        "rank": 17,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CHEVRON CORPORATION",
+        "value": 2788531578,
+        "shares": 0,
+        "rank": 18,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "DELTA AIR LINES INC",
+        "value": 2646532635,
+        "shares": 0,
+        "rank": 19,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "SIRIUSXM HOLDINGS INC",
+        "value": 2511616999,
+        "shares": 0,
+        "rank": 20,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "DAVITA INC",
+        "value": 2324865095,
+        "shares": 0,
+        "rank": 21,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "DAVITA INC",
+        "value": 2301293814,
+        "shares": 0,
+        "rank": 22,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "VERISIGN INC",
+        "value": 1991085480,
+        "shares": 0,
+        "rank": 23,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "KROGER CO",
+        "value": 1972335334,
+        "shares": 0,
+        "rank": 24,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALPHABET INC",
+        "value": 1926652000,
+        "shares": 0,
+        "rank": 25,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CHEVRON CORPORATION",
+        "value": 1901860180,
+        "shares": 0,
+        "rank": 26,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "APPLE INC",
+        "value": 1828303160,
+        "shares": 0,
+        "rank": 27,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALPHABET INC",
+        "value": 1797250000,
+        "shares": 0,
+        "rank": 28,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 1376634919,
+        "shares": 0,
+        "rank": 29,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "KROGER CO",
+        "value": 1165509032,
+        "shares": 0,
+        "rank": 30,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "NEW YORK TIMES CO MTN BE",
+        "value": 1150997376,
+        "shares": 0,
+        "rank": 31,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 1140019920,
+        "shares": 0,
+        "rank": 32,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 1095971760,
+        "shares": 0,
+        "rank": 33,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALPHABET INC",
+        "value": 1028454775,
+        "shares": 0,
+        "rank": 34,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 1023750000,
+        "shares": 0,
+        "rank": 35,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 974553600,
+        "shares": 0,
+        "rank": 36,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 958311040,
+        "shares": 0,
+        "rank": 37,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LENNAR CORP",
+        "value": 877052911,
+        "shares": 0,
+        "rank": 38,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CHEVRON CORPORATION",
+        "value": 714685980,
+        "shares": 0,
+        "rank": 39,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "APPLE INC",
+        "value": 691323960,
+        "shares": 0,
+        "rank": 40,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 688278480,
+        "shares": 0,
+        "rank": 41,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "NUCOR CORP",
+        "value": 660686383,
+        "shares": 0,
+        "rank": 42,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 580125000,
+        "shares": 0,
+        "rank": 43,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CAPITAL ONE FINL CORP",
+        "value": 560750962,
+        "shares": 0,
+        "rank": 44,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 518318636,
+        "shares": 0,
+        "rank": 45,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 498992850,
+        "shares": 0,
+        "rank": 46,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 477750000,
+        "shares": 0,
+        "rank": 47,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "AMERICAN EXPRESS CO",
+        "value": 423385188,
+        "shares": 0,
+        "rank": 48,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CAPITAL ONE FINL CORP",
+        "value": 389852910,
+        "shares": 0,
+        "rank": 49,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "KROGER CO",
+        "value": 388364731,
+        "shares": 0,
+        "rank": 50,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "SIRIUSXM HOLDINGS INC",
+        "value": 368931261,
+        "shares": 0,
+        "rank": 51,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "CAPITAL ONE FINL CORP",
+        "value": 353770628,
+        "shares": 0,
+        "rank": 52,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "AMERICAN EXPRESS CO",
+        "value": 347834456,
+        "shares": 0,
+        "rank": 53,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 327469956,
+        "shares": 0,
+        "rank": 54,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LOUISIANA PAC CORP",
+        "value": 316092130,
+        "shares": 0,
+        "rank": 55,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 301016781,
+        "shares": 0,
+        "rank": 56,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 270129600,
+        "shares": 0,
+        "rank": 57,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "VERISIGN INC",
+        "value": 241641117,
+        "shares": 0,
+        "rank": 58,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 191100000,
+        "shares": 0,
+        "rank": 59,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 189726088,
+        "shares": 0,
+        "rank": 60,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 175622680,
+        "shares": 0,
+        "rank": 61,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 165872286,
+        "shares": 0,
+        "rank": 62,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 138715200,
+        "shares": 0,
+        "rank": 63,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 135263268,
+        "shares": 0,
+        "rank": 64,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 123064510,
+        "shares": 0,
+        "rank": 65,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "NEW YORK TIMES CO MTN BE",
+        "value": 117222000,
+        "shares": 0,
+        "rank": 66,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 109996016,
+        "shares": 0,
+        "rank": 67,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 102375000,
+        "shares": 0,
+        "rank": 68,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LOUISIANA PAC CORP",
+        "value": 96021561,
+        "shares": 0,
+        "rank": 69,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "CONSTELLATION BRANDS INC",
+        "value": 94933500,
+        "shares": 0,
+        "rank": 70,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 92712005,
+        "shares": 0,
+        "rank": 71,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "NVR INC",
+        "value": 73226191,
+        "shares": 0,
+        "rank": 72,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 73008000,
+        "shares": 0,
+        "rank": 73,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 60840000,
+        "shares": 0,
+        "rank": 74,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "KROGER CO",
+        "value": 55610903,
+        "shares": 0,
+        "rank": 75,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 50018250,
+        "shares": 0,
+        "rank": 76,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 41858220,
+        "shares": 0,
+        "rank": 77,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "KROGER CO",
+        "value": 36180000,
+        "shares": 0,
+        "rank": 78,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "MOODYS CORP",
+        "value": 31453625,
+        "shares": 0,
+        "rank": 79,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "MACYS INC",
+        "value": 30067914,
+        "shares": 0,
+        "rank": 80,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 28250370,
+        "shares": 0,
+        "rank": 81,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "MACYS INC",
+        "value": 24895928,
+        "shares": 0,
+        "rank": 82,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 21383919,
+        "shares": 0,
+        "rank": 83,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "LENNAR CORP",
+        "value": 19995576,
+        "shares": 0,
+        "rank": 84,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "JEFFERIES FINANCIAL GROUP IN",
+        "value": 17892939,
+        "shares": 0,
+        "rank": 85,
+        "changeType": "new",
+        "changePct": null
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 15304168,
+        "shares": 0,
+        "rank": 86,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "APPLE INC",
+        "value": 8628860,
+        "shares": 0,
+        "rank": 87,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 7093125,
+        "shares": 0,
+        "rank": 88,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 6464250,
+        "shares": 0,
+        "rank": 89,
+        "changeType": "sold",
+        "changePct": -100
+      },
+      {
+        "name": "ALPHABET INC",
+        "value": 4802252,
+        "shares": 0,
+        "rank": 90,
+        "changeType": "sold",
+        "changePct": -100
+      }
+    ]
+  },
+  "prev": {
+    "period": "2025-12-31",
+    "filed": "2026-02-17",
+    "holdings": [
+      {
+        "name": "AMERICAN EXPRESS CO",
+        "value": 55145133598,
+        "shares": 0,
+        "rank": 1
+      },
+      {
+        "name": "APPLE INC",
+        "value": 21929537965,
+        "shares": 0,
+        "rank": 2
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 19765145984,
+        "shares": 0,
+        "rank": 3
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 17094000000,
+        "shares": 0,
+        "rank": 4
+      },
+      {
+        "name": "APPLE INC",
+        "value": 16731076718,
+        "shares": 0,
+        "rank": 5
+      },
+      {
+        "name": "OCCIDENTAL PETE CORP",
+        "value": 10894391643,
+        "shares": 0,
+        "rank": 6
+      },
+      {
+        "name": "CHUBB LIMITED",
+        "value": 10689854998,
+        "shares": 0,
+        "rank": 7
+      },
+      {
+        "name": "APPLE INC",
+        "value": 9440066640,
+        "shares": 0,
+        "rank": 8
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 9385335405,
+        "shares": 0,
+        "rank": 9
+      },
+      {
+        "name": "KRAFT HEINZ CO",
+        "value": 7896644337,
+        "shares": 0,
+        "rank": 10
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 6914600000,
+        "shares": 0,
+        "rank": 11
+      },
+      {
+        "name": "MOODYS CORP",
+        "value": 6448842688,
+        "shares": 0,
+        "rank": 12
+      },
+      {
+        "name": "MOODYS CORP",
+        "value": 6116881119,
+        "shares": 0,
+        "rank": 13
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 5612598512,
+        "shares": 0,
+        "rank": 14
+      },
+      {
+        "name": "ALPHABET INC",
+        "value": 5585842446,
+        "shares": 0,
+        "rank": 15
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 4955947671,
+        "shares": 0,
+        "rank": 16
+      },
+      {
+        "name": "APPLE INC",
+        "value": 4222529520,
+        "shares": 0,
+        "rank": 17
+      },
+      {
+        "name": "APPLE INC",
+        "value": 3934357920,
+        "shares": 0,
+        "rank": 18
+      },
+      {
+        "name": "VISA INC",
+        "value": 2910002197,
+        "shares": 0,
+        "rank": 19
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 2676929392,
+        "shares": 0,
+        "rank": 20
+      },
+      {
+        "name": "MASTERCARD INCORPORATED",
+        "value": 2275897610,
+        "shares": 0,
+        "rank": 21
+      },
+      {
+        "name": "SIRIUS XM HOLDINGS INC",
+        "value": 2175900429,
+        "shares": 0,
+        "rank": 22
+      },
+      {
+        "name": "APPLE INC",
+        "value": 1958479440,
+        "shares": 0,
+        "rank": 23
+      },
+      {
+        "name": "VERISIGN INC",
+        "value": 1947713872,
+        "shares": 0,
+        "rank": 24
+      },
+      {
+        "name": "DAVITA INC",
+        "value": 1889571518,
+        "shares": 0,
+        "rank": 25
+      },
+      {
+        "name": "CONSTELLATION BRANDS INC",
+        "value": 1793480000,
+        "shares": 0,
+        "rank": 26
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 1759699645,
+        "shares": 0,
+        "rank": 27
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 1755073870,
+        "shares": 0,
+        "rank": 28
+      },
+      {
+        "name": "DAVITA INC",
+        "value": 1718575857,
+        "shares": 0,
+        "rank": 29
+      },
+      {
+        "name": "KROGER CO",
+        "value": 1703033605,
+        "shares": 0,
+        "rank": 30
+      },
+      {
+        "name": "DOMINOS PIZZA INC",
+        "value": 1396347000,
+        "shares": 0,
+        "rank": 31
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 1155000000,
+        "shares": 0,
+        "rank": 32
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 1047978864,
+        "shares": 0,
+        "rank": 33
+      },
+      {
+        "name": "NUCOR CORP",
+        "value": 1045167939,
+        "shares": 0,
+        "rank": 34
+      },
+      {
+        "name": "APPLE INC",
+        "value": 1043942400,
+        "shares": 0,
+        "rank": 35
+      },
+      {
+        "name": "KROGER CO",
+        "value": 1037610983,
+        "shares": 0,
+        "rank": 36
+      },
+      {
+        "name": "APPLE INC",
+        "value": 1026543360,
+        "shares": 0,
+        "rank": 37
+      },
+      {
+        "name": "UNITEDHEALTH GROUP INC",
+        "value": 1018278433,
+        "shares": 0,
+        "rank": 38
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 1007486992,
+        "shares": 0,
+        "rank": 39
+      },
+      {
+        "name": "CAPITAL ONE FINL CORP",
+        "value": 744963017,
+        "shares": 0,
+        "rank": 40
+      },
+      {
+        "name": "APPLE INC",
+        "value": 740546640,
+        "shares": 0,
+        "rank": 41
+      },
+      {
+        "name": "APPLE INC",
+        "value": 737284320,
+        "shares": 0,
+        "rank": 42
+      },
+      {
+        "name": "LENNAR CORP",
+        "value": 724837660,
+        "shares": 0,
+        "rank": 43
+      },
+      {
+        "name": "POOL CORP",
+        "value": 702007444,
+        "shares": 0,
+        "rank": 44
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 654500000,
+        "shares": 0,
+        "rank": 45
+      },
+      {
+        "name": "UNITEDHEALTH GROUP INC",
+        "value": 645332039,
+        "shares": 0,
+        "rank": 46
+      },
+      {
+        "name": "AON PLC",
+        "value": 637652396,
+        "shares": 0,
+        "rank": 47
+      },
+      {
+        "name": "AON PLC",
+        "value": 618314219,
+        "shares": 0,
+        "rank": 48
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 576074081,
+        "shares": 0,
+        "rank": 49
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 539000000,
+        "shares": 0,
+        "rank": 50
+      },
+      {
+        "name": "AMAZON COM INC",
+        "value": 525346320,
+        "shares": 0,
+        "rank": 51
+      },
+      {
+        "name": "CAPITAL ONE FINL CORP",
+        "value": 517923320,
+        "shares": 0,
+        "rank": 52
+      },
+      {
+        "name": "AMERICAN EXPRESS CO",
+        "value": 517823824,
+        "shares": 0,
+        "rank": 53
+      },
+      {
+        "name": "CAPITAL ONE FINL CORP",
+        "value": 469987663,
+        "shares": 0,
+        "rank": 54
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 459845361,
+        "shares": 0,
+        "rank": 55
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 435648744,
+        "shares": 0,
+        "rank": 56
+      },
+      {
+        "name": "AMERICAN EXPRESS CO",
+        "value": 425421043,
+        "shares": 0,
+        "rank": 57
+      },
+      {
+        "name": "LOUISIANA PAC CORP",
+        "value": 350894851,
+        "shares": 0,
+        "rank": 58
+      },
+      {
+        "name": "KROGER CO",
+        "value": 335337595,
+        "shares": 0,
+        "rank": 59
+      },
+      {
+        "name": "HEICO CORP NEW",
+        "value": 326798907,
+        "shares": 0,
+        "rank": 60
+      },
+      {
+        "name": "SIRIUS XM HOLDINGS INC",
+        "value": 319617876,
+        "shares": 0,
+        "rank": 61
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 318841720,
+        "shares": 0,
+        "rank": 62
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 302667639,
+        "shares": 0,
+        "rank": 63
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 295370580,
+        "shares": 0,
+        "rank": 64
+      },
+      {
+        "name": "LIBERTY MEDIA CORP DEL",
+        "value": 285002729,
+        "shares": 0,
+        "rank": 65
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 267709163,
+        "shares": 0,
+        "rank": 66
+      },
+      {
+        "name": "NEW YORK TIMES CO",
+        "value": 254475948,
+        "shares": 0,
+        "rank": 67
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 248320320,
+        "shares": 0,
+        "rank": 68
+      },
+      {
+        "name": "VERISIGN INC",
+        "value": 236377474,
+        "shares": 0,
+        "rank": 69
+      },
+      {
+        "name": "CHARTER COMMUNICATIONS INC N",
+        "value": 221459118,
+        "shares": 0,
+        "rank": 70
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 219033763,
+        "shares": 0,
+        "rank": 71
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 215600000,
+        "shares": 0,
+        "rank": 72
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 191495178,
+        "shares": 0,
+        "rank": 73
+      },
+      {
+        "name": "APPLE INC",
+        "value": 188127120,
+        "shares": 0,
+        "rank": 74
+      },
+      {
+        "name": "LAMAR ADVERTISING CO NEW",
+        "value": 152201058,
+        "shares": 0,
+        "rank": 75
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 142074730,
+        "shares": 0,
+        "rank": 76
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 127515840,
+        "shares": 0,
+        "rank": 77
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 126987499,
+        "shares": 0,
+        "rank": 78
+      },
+      {
+        "name": "ALLEGION PLC",
+        "value": 124212776,
+        "shares": 0,
+        "rank": 79
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 119971273,
+        "shares": 0,
+        "rank": 80
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 115500000,
+        "shares": 0,
+        "rank": 81
+      },
+      {
+        "name": "LOUISIANA PAC CORP",
+        "value": 106593832,
+        "shares": 0,
+        "rank": 82
+      },
+      {
+        "name": "NEW YORK TIMES CO",
+        "value": 97188000,
+        "shares": 0,
+        "rank": 83
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 82453387,
+        "shares": 0,
+        "rank": 84
+      },
+      {
+        "name": "NVR INC",
+        "value": 81037260,
+        "shares": 0,
+        "rank": 85
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 67113600,
+        "shares": 0,
+        "rank": 86
+      },
+      {
+        "name": "ALLY FINL INC",
+        "value": 57744750,
+        "shares": 0,
+        "rank": 87
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 55928000,
+        "shares": 0,
+        "rank": 88
+      },
+      {
+        "name": "KROGER CO",
+        "value": 48017817,
+        "shares": 0,
+        "rank": 89
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 37226592,
+        "shares": 0,
+        "rank": 90
+      },
+      {
+        "name": "MOODYS CORP",
+        "value": 36832285,
+        "shares": 0,
+        "rank": 91
+      },
+      {
+        "name": "JEFFERIES FINL GROUP INC",
+        "value": 26867589,
+        "shares": 0,
+        "rank": 92
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 25969538,
+        "shares": 0,
+        "rank": 93
+      },
+      {
+        "name": "DIAGEO PLC",
+        "value": 19647993,
+        "shares": 0,
+        "rank": 94
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 19017781,
+        "shares": 0,
+        "rank": 95
+      },
+      {
+        "name": "LENNAR CORP",
+        "value": 17214818,
+        "shares": 0,
+        "rank": 96
+      },
+      {
+        "name": "AON PLC",
+        "value": 15458261,
+        "shares": 0,
+        "rank": 97
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 13523479,
+        "shares": 0,
+        "rank": 98
+      },
+      {
+        "name": "LIBERTY MEDIA CORP DEL",
+        "value": 12355124,
+        "shares": 0,
+        "rank": 99
+      },
+      {
+        "name": "LIBERTY LATIN AMERICA LTD",
+        "value": 12010117,
+        "shares": 0,
+        "rank": 100
+      },
+      {
+        "name": "LIBERTY LIVE HOLDINGS INC",
+        "value": 11904936,
+        "shares": 0,
+        "rank": 101
+      },
+      {
+        "name": "LIBERTY LATIN AMERICA LTD",
+        "value": 9578789,
+        "shares": 0,
+        "rank": 102
+      },
+      {
+        "name": "CHEVRON CORP NEW",
+        "value": 9357974,
+        "shares": 0,
+        "rank": 103
+      },
+      {
+        "name": "APPLE INC",
+        "value": 9243240,
+        "shares": 0,
+        "rank": 104
+      },
+      {
+        "name": "BANK AMERICA CORP",
+        "value": 8002500,
+        "shares": 0,
+        "rank": 105
+      },
+      {
+        "name": "COCA COLA CO",
+        "value": 5942350,
+        "shares": 0,
+        "rank": 106
+      },
+      {
+        "name": "LIBERTY LATIN AMERICA LTD",
+        "value": 5701237,
+        "shares": 0,
+        "rank": 107
+      },
+      {
+        "name": "ATLANTA BRAVES HLDGS INC",
+        "value": 3821403,
+        "shares": 0,
+        "rank": 108
+      },
+      {
+        "name": "ATLANTA BRAVES HLDGS INC",
+        "value": 588949,
+        "shares": 0,
+        "rank": 109
+      },
+      {
+        "name": "ATLANTA BRAVES HLDGS INC",
+        "value": 143282,
+        "shares": 0,
+        "rank": 110
+      }
+    ]
+  }
+}

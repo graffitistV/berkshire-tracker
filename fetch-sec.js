@@ -1,22 +1,26 @@
 // 這個腳本由 GitHub Actions 每天自動執行
-// 它從 SEC EDGAR 抓取波克夏的持股資料，存成 data/holdings.json
-// 網頁直接讀這個 JSON，就不需要瀏覽器直接連 SEC
+// 從 SEC EDGAR 抓取波克夏的 13F 持股 XML，存成 data/holdings.json
 
 const https = require('https');
 const fs    = require('fs');
 const path  = require('path');
 
-const BRK_CIK = '0001067983';
+const BRK_CIK     = '0001067983';
+const BRK_CIK_NUM = '1067983';
 
 function get(url) {
   return new Promise((resolve, reject) => {
     const opts = {
       headers: {
         'User-Agent': 'BerkshireTracker/1.0 contact@example.com',
-        'Accept': 'application/json, text/xml, */*',
+        'Accept': '*/*',
       }
     };
     https.get(url, opts, res => {
+      // 追蹤重定向
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return get(res.headers.location).then(resolve).catch(reject);
+      }
       let body = '';
       res.on('data', d => body += d);
       res.on('end', () => {
@@ -32,26 +36,49 @@ function get(url) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
+// 從 HTML 目錄頁找 infotable XML 的檔名
+function findXmlInHtml(html) {
+  // SEC 目錄頁的連結格式：href="filename.xml"
+  const patterns = [
+    /href="([^"]*infotable[^"]*\.xml)"/i,
+    /href="([^"]*13finfotable[^"]*\.xml)"/i,
+    /href="([^"]*form13f[^"]*\.xml)"/i,
+    /href="([^"]*holdings[^"]*\.xml)"/i,
+  ];
+  for (const re of patterns) {
+    const m = html.match(re);
+    if (m) return m[1].replace(/^.*\//, ''); // 只取檔名
+  }
+
+  // 找任何不是封面頁的 XML
+  const allXml = [...html.matchAll(/href="([^"]*\.xml)"/gi)].map(m => m[1].replace(/^.*\//, ''));
+  return allXml.find(f =>
+    !['primary_doc.xml', 'xslForm13F_X02.xsl'].includes(f.toLowerCase()) &&
+    !f.toLowerCase().startsWith('xsl')
+  ) || null;
+}
+
 // 解析 infotable XML
 function parseInfoTable(xml) {
   const holdings = [];
-  const rowRe = /<infoTable>([\s\S]*?)<\/infoTable>/g;
-  const tagRe = /<([^>\/\s]+)[^>]*>([\s\S]*?)<\/\1>/g;
+  const rowRe = /<infoTable>([\s\S]*?)<\/infoTable>/gi;
+  const tagRe = /<([^>\/\s:]+)[^>]*>([\s\S]*?)<\/[^>]+>/g;
 
   let row;
   while ((row = rowRe.exec(xml)) !== null) {
     const block = row[1];
     const fields = {};
     let m;
-    while ((m = tagRe.exec(block)) !== null) {
+    const re = new RegExp(tagRe.source, 'g');
+    while ((m = re.exec(block)) !== null) {
       fields[m[1]] = m[2].trim();
     }
-    const name   = fields['nameOfIssuer'] || '';
-    const value  = parseInt(fields['value'], 10) || 0;
-    const shares = parseInt(fields['sshPrnamt'], 10) || 0;
+    const name    = fields['nameOfIssuer'] || '';
+    const value   = parseInt(fields['value'], 10) || 0;
+    const shares  = parseInt(fields['sshPrnamt'], 10) || 0;
     const putCall = fields['putCall'] || '';
 
-    if (putCall) continue;          // 略過選擇權
+    if (putCall) continue;
     if (!name || value === 0) continue;
 
     holdings.push({ name, value, shares });
@@ -60,6 +87,29 @@ function parseInfoTable(xml) {
   holdings.sort((a, b) => b.value - a.value);
   holdings.forEach((h, i) => { h.rank = i + 1; });
   return holdings;
+}
+
+// 取得並解析一份 13F 申報
+async function processFiling(filing) {
+  console.log(`\n處理 ${filing.period} (accNo: ${filing.accNo})`);
+  await sleep(600);
+
+  // 用 EDGAR 目錄頁 HTML 找 XML 檔名
+  const dirUrl = `https://www.sec.gov/Archives/edgar/data/${BRK_CIK_NUM}/${filing.accNo}/`;
+  console.log(`  目錄頁：${dirUrl}`);
+  const html = await get(dirUrl);
+
+  const xmlName = findXmlInHtml(html);
+  if (!xmlName) throw new Error('找不到 infotable XML 檔案');
+  console.log(`  XML 檔案：${xmlName}`);
+
+  await sleep(400);
+  const xmlUrl = `https://www.sec.gov/Archives/edgar/data/${BRK_CIK_NUM}/${filing.accNo}/${xmlName}`;
+  const xml = await get(xmlUrl);
+  const holdings = parseInfoTable(xml);
+  console.log(`  解析完成：${holdings.length} 筆持股`);
+
+  return { ...filing, holdings };
 }
 
 async function main() {
@@ -72,53 +122,34 @@ async function main() {
   const accNos  = sub.filings.recent.accessionNumber;
   const periods = sub.filings.recent.reportDate;
 
-  // 找最新兩份 13F-HR
   const filings = [];
   for (let i = 0; i < forms.length; i++) {
     if (forms[i] === '13F-HR') {
-      filings.push({ accNo: accNos[i].replace(/-/g,''), accNoDash: accNos[i], filed: dates[i], period: periods[i] });
+      filings.push({
+        accNo:  accNos[i].replace(/-/g, ''),  // 無破折號，用於路徑
+        filed:  dates[i],
+        period: periods[i],
+      });
       if (filings.length === 2) break;
     }
   }
   if (filings.length === 0) throw new Error('找不到 13F 申報');
   console.log(`  找到 ${filings.length} 份申報，最新：${filings[0].period}`);
 
+  // 解析最新兩份
   const results = [];
-  for (const filing of filings) {
-    console.log(`\n2. 處理 ${filing.period} (${filing.accNo})…`);
-    await sleep(500); // 避免請求太快
-
-    const idxJson = await get(
-      `https://www.sec.gov/Archives/edgar/data/1067983/${filing.accNo}/${filing.accNoDash}-index.json`
-    );
-    const idx = JSON.parse(idxJson);
-    const files = idx.directory.item;
-
-    const xmlFile = files.find(f =>
-      f.name.toLowerCase().includes('infotable') ||
-      (f.name.toLowerCase().endsWith('.xml') &&
-       !['primary_doc.xml','xslForm13F_X02.xsl'].includes(f.name.toLowerCase()))
-    );
-    if (!xmlFile) { console.warn('  找不到 XML，跳過'); continue; }
-
-    console.log(`  XML 檔案：${xmlFile.name}`);
-    await sleep(300);
-
-    const xml = await get(
-      `https://www.sec.gov/Archives/edgar/data/1067983/${filing.accNo}/${xmlFile.name}`
-    );
-    const holdings = parseInfoTable(xml);
-    console.log(`  解析完成，${holdings.length} 筆持股`);
-
-    results.push({ ...filing, holdings });
+  for (const f of filings) {
+    try {
+      results.push(await processFiling(f));
+    } catch (e) {
+      console.warn(`  ⚠️ 跳過 ${f.period}：${e.message}`);
+    }
   }
-
-  if (results.length === 0) throw new Error('沒有解析到任何資料');
+  if (results.length === 0) throw new Error('沒有成功解析任何申報');
 
   // 計算季度變化
   const latest = results[0];
   const prev   = results[1];
-
   const prevMap = {};
   if (prev) {
     for (const h of prev.holdings) prevMap[h.name] = h.shares;
@@ -139,20 +170,12 @@ async function main() {
 
   const output = {
     fetchedAt: new Date().toISOString(),
-    latest: {
-      period:   latest.period,
-      filed:    latest.filed,
-      holdings: latest.holdings,
-    },
-    prev: prev ? {
-      period:   prev.period,
-      filed:    prev.filed,
-      holdings: prev.holdings,
-    } : null,
+    latest: { period: latest.period, filed: latest.filed, holdings: latest.holdings },
+    prev:   prev ? { period: prev.period, filed: prev.filed, holdings: prev.holdings } : null,
   };
 
   fs.writeFileSync(path.join(outDir, 'holdings.json'), JSON.stringify(output, null, 2));
-  console.log(`\n✅ 資料已存到 data/holdings.json（${latest.holdings.length} 筆）`);
+  console.log(`\n✅ 完成！data/holdings.json 已更新（${latest.holdings.length} 筆，${latest.period}）`);
 }
 
 main().catch(e => { console.error('❌ 錯誤：', e.message); process.exit(1); });

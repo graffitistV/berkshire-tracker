@@ -76,7 +76,7 @@ async function main() {
   const filings = [];
   for (let i = 0; i < forms.length; i++) {
     if (forms[i] === '13F-HR') {
-      filings.push({ accNo: accNos[i].replace(/-/g,''), filed: dates[i], period: periods[i] });
+      filings.push({ accNo: accNos[i].replace(/-/g,''), accNoDash: accNos[i], filed: dates[i], period: periods[i] });
       if (filings.length === 2) break;
     }
   }
@@ -89,7 +89,7 @@ async function main() {
     await sleep(500); // 避免請求太快
 
     const idxJson = await get(
-      `https://www.sec.gov/Archives/edgar/data/1067983/${filing.accNo}/${filing.accNo}-index.json`
+      `https://www.sec.gov/Archives/edgar/data/1067983/${filing.accNo}/${filing.accNoDash}-index.json`
     );
     const idx = JSON.parse(idxJson);
     const files = idx.directory.item;

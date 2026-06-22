@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>波克夏海瑟威持股追蹤</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <h1>🏦 波克夏海瑟威持股追蹤</h1>
+        <p class="subtitle">資料來源：美國 SEC EDGAR（每季更新）</p>
+      </div>
+      <button id="btn-refresh" onclick="loadData()">🔄 更新資料</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 狀態提示 -->
+    <div id="status-bar" class="status-bar hidden"></div>
+
+    <!-- 更新時間 -->
+    <div id="last-update" style="font-size:.8rem;color:#888;text-align:right;margin-top:-8px;"></div>
+
+    <!-- 摘要卡片 -->
+    <section class="cards" id="summary-cards">
+      <div class="card">
+        <div class="card-label">申報季度</div>
+        <div class="card-value" id="card-period">—</div>
+      </div>
+      <div class="card">
+        <div class="card-label">申報日期</div>
+        <div class="card-value" id="card-filed" style="font-size:1.1rem">—</div>
+      </div>
+      <div class="card">
+        <div class="card-label">持股檔數</div>
+        <div class="card-value" id="card-count">—</div>
+      </div>
+      <div class="card">
+        <div class="card-label">總市值（億美元）</div>
+        <div class="card-value" id="card-value">—</div>
+      </div>
+      <div class="card">
+        <div class="card-label">新買入</div>
+        <div class="card-value green" id="card-new">—</div>
+      </div>
+      <div class="card">
+        <div class="card-label">賣出清倉</div>
+        <div class="card-value red" id="card-sold">—</div>
+      </div>
+    </section>
+
+    <!-- 圖表 + 變化 -->
+    <section class="two-col">
+
+      <div class="panel">
+        <h2>📊 持股比例（前15大）</h2>
+        <div class="chart-wrap">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>📈 本季重大變化</h2>
+        <div id="changes-list" class="changes-list">
+          <p class="placeholder">載入中…</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 完整持股表格 -->
+    <section class="panel full-width">
+      <div class="table-header">
+        <h2>📋 完整持股清單</h2>
+        <input id="search" type="text" placeholder="搜尋公司名稱…" oninput="filterTable()" />
+      </div>
+      <div class="table-wrap">
+        <table id="holdings-table">
+          <thead>
+            <tr>
+              <th onclick="sortBy('rank')"># <span class="sort-icon">↕</span></th>
+              <th onclick="sortBy('name')">公司名稱 <span class="sort-icon">↕</span></th>
+              <th onclick="sortBy('value')">市值（千美元）<span class="sort-icon">↕</span></th>
+              <th onclick="sortBy('shares')">股數 <span class="sort-icon">↕</span></th>
+              <th onclick="sortBy('changePct')">季度變化 <span class="sort-icon">↕</span></th>
+              <th>狀態</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr><td colspan="7" class="placeholder">請點「更新資料」載入最新持股…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>資料來源：<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001067983&type=13F&dateb=&owner=include&count=10" target="_blank">SEC EDGAR 13F 申報</a>　｜　本網頁僅供參考，不構成投資建議</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

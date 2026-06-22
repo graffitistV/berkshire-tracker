@@ -1,0 +1,32 @@
+name: 每日更新持股資料
+
+on:
+  schedule:
+    - cron: '0 16 * * *'   # 每天台灣時間午夜 (UTC 16:00)
+  workflow_dispatch:        # 也可以手動觸發
+
+permissions:
+  contents: write           # 允許把 data/holdings.json 推回 repo
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 執行抓資料腳本
+        run: node fetch-sec.js
+
+      - name: 把更新後的 JSON 推回 GitHub
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/holdings.json
+          git diff --staged --quiet || git commit -m "自動更新：$(date '+%Y-%m-%d') 持股資料"
+          git push

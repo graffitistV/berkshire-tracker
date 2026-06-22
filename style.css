@@ -1,0 +1,199 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  color: white;
+  padding: 24px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.3);
+}
+.header-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+header h1 { font-size: 1.7rem; font-weight: 700; }
+.subtitle { font-size: .85rem; opacity: .7; margin-top: 4px; }
+
+#btn-refresh {
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+  white-space: nowrap;
+}
+#btn-refresh:hover { background: #c73652; transform: scale(1.03); }
+#btn-refresh:disabled { background: #888; cursor: not-allowed; transform: none; }
+
+/* ── Status bar ── */
+.status-bar {
+  max-width: 1300px;
+  margin: 20px auto 0;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: .9rem;
+}
+.status-bar.info  { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+.status-bar.error { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+.status-bar.ok    { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+.hidden { display: none; }
+
+/* ── Main ── */
+main {
+  max-width: 1300px;
+  margin: 24px auto 40px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Summary cards ── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  text-align: center;
+}
+.card-label { font-size: .78rem; color: #666; text-transform: uppercase; letter-spacing: .05em; }
+.card-value { font-size: 1.6rem; font-weight: 700; margin-top: 6px; color: #1a1a2e; }
+.card-value.green { color: #16a34a; }
+.card-value.red   { color: #dc2626; }
+
+/* ── Two-column layout ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
+
+/* ── Panel ── */
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+.panel h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; color: #1a1a2e; }
+.full-width { width: 100%; }
+
+/* ── Pie chart ── */
+.chart-wrap {
+  position: relative;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Changes list ── */
+.changes-list { display: flex; flex-direction: column; gap: 8px; max-height: 360px; overflow-y: auto; }
+.change-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  font-size: .88rem;
+}
+.change-item .badge {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: .75rem;
+  font-weight: 700;
+}
+.badge.new    { background: #dcfce7; color: #166534; }
+.badge.add    { background: #dbeafe; color: #1e40af; }
+.badge.trim   { background: #fef9c3; color: #854d0e; }
+.badge.sold   { background: #fee2e2; color: #991b1b; }
+.change-item .pct { margin-left: auto; font-weight: 600; }
+.pct.up   { color: #16a34a; }
+.pct.down { color: #dc2626; }
+
+/* ── Table ── */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+#search {
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: .9rem;
+  width: 220px;
+  outline: none;
+  transition: border-color .2s;
+}
+#search:focus { border-color: #0f3460; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+thead th {
+  background: #f0f2f5;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+thead th:hover { background: #e2e8f0; }
+tbody tr { border-bottom: 1px solid #f0f2f5; transition: background .15s; }
+tbody tr:hover { background: #f8f9fa; }
+tbody td { padding: 10px 12px; }
+.rank-col { color: #888; font-size: .8rem; }
+.ticker { font-weight: 700; color: #0f3460; font-family: monospace; }
+.value-col { font-variant-numeric: tabular-nums; }
+.placeholder { text-align: center; color: #888; padding: 40px; }
+.sort-icon { opacity: .4; font-size: .75rem; }
+
+/* ── Status tags ── */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: .75rem;
+  font-weight: 600;
+}
+.tag-new  { background: #dcfce7; color: #166534; }
+.tag-add  { background: #dbeafe; color: #1e40af; }
+.tag-trim { background: #fef9c3; color: #854d0e; }
+.tag-sold { background: #fee2e2; color: #991b1b; }
+.tag-hold { background: #f0f2f5; color: #555; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: .8rem;
+  color: #888;
+}
+footer a { color: #0f3460; }
